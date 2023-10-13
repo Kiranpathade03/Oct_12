@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" onsubmit="validation()">
+        <input type="text" name="" id="fname"><br><br>
+        <input type="text" name="" id="lname"><br><br>
+        <input type="submit" name="" id="submit" value="Submit">
+    </form>
+    <script>
+        function validation() {
+            let a = document.getElementById('fname').value;
+            let b = document.getElementById('lname').value;
+
+            if (a == "") {
+                alert("enter a first name");
+
+            } else if (b == "") {
+                alert("Enter a last name");
+
+            }
+        }
+    </script>
+</body>
+
+</html>

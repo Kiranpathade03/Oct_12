@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Corrected viewport meta tag -->
+    <title>Document</title>
+</head>
+
+<body>
+    <form name="myform" onsubmit="return validation()" method="post">
+        E-MAIL <input style="text-transform: capitalize;" id="email" type="text" name="email"> <br><br> PASSWORD: <input id="pass" type="password" name="pass"><br><br> PHone No:<input type="number" name="number" id=""><br><br>
+
+        <input type="submit" value="SAVE">
+
+    </form>
+
+    <script>
+        function validation() {
+            let x = document.forms["myform"]["email"].value;
+            let y = document.forms["myform"]["pass"].value;
+            let z = document.forms["myform"]["number"].value;
+            if (x == "") {
+                alert("Email must be filled");
+                return false;
+            } else if (y == "") {
+                alert("Password must be filled");
+                return false;
+            } else if (z == "") {
+                alert("Number must be fill")
+                return false;
+            } else if (x == " " && y == "" && z == "") {
+                alert("Fill this form")
+                return false;
+            } else if (y.length < 6) {
+                alert("Password must be at least 6 characters long");
+                return false;
+            } else if (z.length < 10) {
+                alert(" Number is must 10 digit");
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>
